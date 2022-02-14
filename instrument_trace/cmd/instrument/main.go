@@ -7,8 +7,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"instrument_trace/instrumenter"
-	"instrument_trace/instrumenter/ast"
+	"github.com/lxlllf/gogogo/instrument_trace/instrumenter"
+	"github.com/lxlllf/gogogo/instrument_trace/instrumenter/ast"
 )
 
 var (
@@ -48,7 +48,7 @@ func main() {
 	}
 
 	var ins instrumenter.Instrumenter
-	ins = ast.New("github.com/yangluo1024/gogogo/instrument_trace", "trace", "Trace")
+	ins = ast.New("github.com/lxlllf/gogogo/instrument_trace", "trace", "Trace")
 	newSrc, err := ins.Instrument(file)
 	if err != nil {
 		panic(err)
